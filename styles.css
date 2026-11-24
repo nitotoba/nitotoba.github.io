@@ -1,23 +1,69 @@
 
+/* ESTILO GENERAL */
+
 body {
     background-color: #11100f;
     color: #f1ede6;
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 40px;
+    padding: 0;
 }
 
-/* TITULO PRINCIPAL */
+/* PORTADA CINEMATOGRAFICA */
+
+.portada {
+    min-height: 100vh;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("retrato.JPG");
+    background-size: cover;
+    background-position: center 35%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 60px 20px;
+}
+
+/* TEXTO SOBRE LA FOTOGRAFIA */
+
+.contenido-portada {
+    width: 100%;
+}
+
+.profesion {
+    color: #c9a878;
+    font-size: 14px;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
 
 h1 {
     font-family: "Gill Sans MT", "Gill Sans", sans-serif;
-    font-size: 65px;
-    text-align: center;
-    color: #c9a878;
-    margin-top: 20px;
+    font-size: clamp(48px, 9vw, 100px);
+    font-weight: normal;
+    color: #f1ede6;
+    margin: 0;
 }
 
-/* SUBTITULOS */
+.subtitulo {
+    color: #f1ede6;
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin-top: 15px;
+}
+
+/* SECCIONES */
+
+main {
+    padding: 30px 20px 70px;
+    max-width: 900px;
+    margin: auto;
+}
 
 h2 {
     color: #c9a878;
@@ -27,22 +73,10 @@ h2 {
     margin-top: 60px;
 }
 
-/* PARRAFOS */
-
-p {
+main p {
     color: #f1ede6;
     font-size: 16px;
     line-height: 1.8;
     text-align: center;
 }
 
-/* FOTOGRAFIA */
-
-.foto-portada {
-    width: 220px;
-    height: 280px;
-    object-fit: cover;
-    display: block;
-    margin: 40px auto 20px;
-    border-radius: 4px;
-}
