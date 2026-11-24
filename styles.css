@@ -10,11 +10,11 @@ body {
 /* TITULO PRINCIPAL */
 
 h1 {
-    color: #c9a878;
-    font-family: Georgia, serif;
+    h1 {
+    font-family: "Gill Sans MT", "Gill Sans", sans-serif;
     font-size: 65px;
     text-align: center;
-    margin-top: 100px;
+    color: #c9a878;
 }
 
 /* SUBTITULOS */
