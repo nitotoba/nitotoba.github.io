@@ -7,6 +7,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+}
+
 }
 
 /* PORTADA CINEMATOGRAFICA */
@@ -60,9 +63,11 @@ h1 {
 /* SECCIONES */
 
 main {
+    background-color: #11100f;
     padding: 30px 20px 70px;
     max-width: 900px;
     margin: auto;
+}
 }
 
 h2 {
