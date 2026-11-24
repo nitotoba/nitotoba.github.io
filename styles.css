@@ -80,3 +80,27 @@ main p {
     text-align: center;
 }
 
+/* MENU DE NAVEGACION */
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    padding: 22px 15px;
+    background-color: #11100f;
+}
+
+.menu a {
+    color: #c9a878;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #f1ede6;
+}
+
