@@ -10,11 +10,11 @@ body {
 /* TITULO PRINCIPAL */
 
 h1 {
-    h1 {
     font-family: "Gill Sans MT", "Gill Sans", sans-serif;
     font-size: 65px;
     text-align: center;
     color: #c9a878;
+    margin-top: 20px;
 }
 
 /* SUBTITULOS */
@@ -35,6 +35,9 @@ p {
     line-height: 1.8;
     text-align: center;
 }
+
+/* FOTOGRAFIA */
+
 .foto-portada {
     width: 220px;
     height: 280px;
