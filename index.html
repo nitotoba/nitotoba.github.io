@@ -154,5 +154,80 @@ Actualmente, curso el Máster en Teatro Musical en Broadway House Madrid, donde 
 
     </main>
 
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-cerrar" aria-label="Cerrar imagen">
+        &times;
+    </button>
+
+    <button class="lightbox-anterior" aria-label="Imagen anterior">
+        &#10094;
+    </button>
+
+    <img class="lightbox-imagen" src="" alt="Fotografía ampliada">
+
+    <button class="lightbox-siguiente" aria-label="Imagen siguiente">
+        &#10095;
+    </button>
+</div>
+
+<script>
+    const galeriaFotos = document.querySelectorAll(
+        '.galeria-contenedor img'
+    );
+
+    const lightbox = document.getElementById('lightbox');
+    const imagenAmpliada = document.querySelector('.lightbox-imagen');
+
+    const cerrar = document.querySelector('.lightbox-cerrar');
+    const anterior = document.querySelector('.lightbox-anterior');
+    const siguiente = document.querySelector('.lightbox-siguiente');
+
+    let indiceActual = 0;
+
+    function mostrarImagen(indice) {
+        indiceActual = (indice + galeriaFotos.length) % galeriaFotos.length;
+        imagenAmpliada.src = galeriaFotos[indiceActual].src;
+        imagenAmpliada.alt = galeriaFotos[indiceActual].alt;
+        lightbox.classList.add('activo');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function cerrarGaleria() {
+        lightbox.classList.remove('activo');
+        document.body.style.overflow = '';
+    }
+
+    galeriaFotos.forEach((foto, indice) => {
+        foto.parentElement.addEventListener('click', (evento) => {
+            evento.preventDefault();
+            mostrarImagen(indice);
+        });
+    });
+
+    cerrar.addEventListener('click', cerrarGaleria);
+
+    anterior.addEventListener('click', () => {
+        mostrarImagen(indiceActual - 1);
+    });
+
+    siguiente.addEventListener('click', () => {
+        mostrarImagen(indiceActual + 1);
+    });
+
+    lightbox.addEventListener('click', (evento) => {
+        if (evento.target === lightbox) {
+            cerrarGaleria();
+        }
+    });
+
+    document.addEventListener('keydown', (evento) => {
+        if (!lightbox.classList.contains('activo')) return;
+
+        if (evento.key === 'Escape') cerrarGaleria();
+        if (evento.key === 'ArrowLeft') mostrarImagen(indiceActual - 1);
+        if (evento.key === 'ArrowRight') mostrarImagen(indiceActual + 1);
+    });
+</script>
+
 </body>
 </html>
