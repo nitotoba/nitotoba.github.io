@@ -105,3 +105,112 @@ main p {
 .menu a:hover {
     color: #f1ede6;
 }
+
+/* VIDEO DE YOUTUBE */
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    aspect-ratio: 16 / 9;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+/* INVITACION A YOUTUBE */
+
+.youtube-invitation {
+    text-align: center;
+    margin: 35px auto 20px;
+}
+
+.arrows {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.arrows span {
+    display: inline-block;
+    color: #c9a878;
+    font-size: 22px;
+    animation: arrowMove 1.8s infinite ease-in-out;
+}
+
+.arrows span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.arrows span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes arrowMove {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: translateY(8px);
+        opacity: 1;
+    }
+}
+
+/* ICONO Y ENLACE YOUTUBE */
+
+.youtube-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #c9a878;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.youtube-icon {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease;
+}
+
+.youtube-link:hover {
+    color: #f1ede6;
+}
+
+.youtube-link:hover .youtube-icon {
+    transform: scale(1.15);
+}
+
+/* SECCION DEL CV */
+
+.cv-link {
+    display: block;
+    width: fit-content;
+    margin: 35px auto;
+    padding: 14px 26px;
+    border: 1px solid #c9a878;
+    color: #c9a878;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.cv-link:hover {
+    background-color: #c9a878;
+    color: #11100f;
+}
+
